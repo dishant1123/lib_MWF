@@ -122,5 +122,4 @@ task  :2  list  : one letter and  last letter same  then append in another  list
 input  :l1 = ["aba" ,"1221" ,"php","python","xyz"]
 output  : l1=["aba" ,"1221" ,"php"]
 
-8673842618
 """
