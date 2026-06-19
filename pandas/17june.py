@@ -55,7 +55,8 @@ print(df.tail(4))
 print(df.info())
 print(df.describe(include='all'))
 """
-df = pd.read_csv("pandas\student1.tsv",sep='\t')
-print(df)
+# df = pd.read_csv("pandas\student1.tsv",sep='\t')
+# print(df)
 
 # hw : json read , excel read ,
+
