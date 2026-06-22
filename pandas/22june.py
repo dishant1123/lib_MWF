@@ -52,4 +52,4 @@ df['sales'] = df['sales'].clip(upper = upper_limit)
 print(df)
 
 
-# next : 2 outlier  , convert  
+# next : 2 outlier,convert,loc,iloc:
