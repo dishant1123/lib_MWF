@@ -39,7 +39,8 @@ print("lower limit :",lower_limit)
 
 
 # z-score :
-"""from scipy.stats import zscore
+"""
+from scipy.stats import zscore
 
 df['z_score'] = zscore(df['sales'])
 outlier = df[df['z_score'].abs() > 2.5]
@@ -53,3 +54,5 @@ print(df)
 
 
 # next : 2 outlier,convert,loc,iloc:
+
+
