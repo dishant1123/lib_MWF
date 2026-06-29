@@ -65,11 +65,38 @@ plt.show()
 
 # bar plot : 
 
-plt.bar(df['name'],df['science'],color='blue',edgecolor='black')
+"""plt.bar(df['name'],df['science'],color='blue',edgecolor='black')
 plt.xlabel('name')
 plt.ylabel('science')
 plt.title("student's science marks")
 # plt.grid(True)
 plt.legend(labels=['science'],loc='upper right')
 plt.show()
+"""
+# histogram :
 
+"""plt.hist(df['science'],bins=4,color='blue',edgecolor='black')
+plt.xlabel('maths')
+plt.ylabel('count')
+plt.title("histogram")
+# plt.grid(True)
+plt.legend(labels=['maths'],loc='upper right')
+plt.show()
+"""
+
+# pie charts : 
+
+mobile =['nokia','samsung','apple','htc','motorola']
+sales_in_qty = [10,200,90,40,30]
+
+plt.pie(sales_in_qty,labels=mobile,startangle=90,autopct='%1.2f%%')
+plt.title("pie chart")
+plt.show()
+
+# task  1 : 
+"""
+using  flipcart dataset trends analysis like :  
+    month wise sales  , day wise sales , year wise sales 
+"""
+
+# next : sub plot , group bar  charts , pie chart , donut chart , boxplot :
