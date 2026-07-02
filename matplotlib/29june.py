@@ -65,7 +65,8 @@ plt.show()
 
 # bar plot : 
 
-"""plt.bar(df['name'],df['science'],color='blue',edgecolor='black')
+"""
+plt.bar(df['name'],df['science'],color='blue',edgecolor='black')
 plt.xlabel('name')
 plt.ylabel('science')
 plt.title("student's science marks")
@@ -86,13 +87,14 @@ plt.show()
 
 # pie charts : 
 
+"""
 mobile =['nokia','samsung','apple','htc','motorola']
 sales_in_qty = [10,200,90,40,30]
 
 plt.pie(sales_in_qty,labels=mobile,startangle=90,autopct='%1.2f%%')
 plt.title("pie chart")
 plt.show()
-
+"""
 # task  1 : 
 """
 using  flipcart dataset trends analysis like :  
@@ -100,3 +102,5 @@ using  flipcart dataset trends analysis like :
 """
 
 # next : sub plot , group bar  charts , pie chart , donut chart , boxplot :
+
+
