@@ -102,7 +102,7 @@ plt.show()
 """
 
 # subplot : 
-df= pd.read_csv("matplotlib\student.csv")
+"""df= pd.read_csv("matplotlib\student.csv")
 
 plt.figure(figsize=(10,8))
 plt.subplot(2,2,1)
@@ -128,4 +128,5 @@ plt.title("scatter")
 plt.tight_layout()
 plt.show()
 
+"""
 
