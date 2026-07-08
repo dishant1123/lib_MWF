@@ -29,17 +29,17 @@ import seaborn as sns
 # print(tips.tail(50))
 
 # pair plot : 
-"""
-Shows relationships between multiple numerical variables.
-Diagonal shows distributions.
-Off-diagonal shows scatter plots.
+
+# Shows relationships between multiple numerical variables.
+# Diagonal shows distributions.
+# Off-diagonal shows scatter plots.
 
 df = sns.load_dataset("iris")
 sns.pairplot(data=df, hue="species")
 
 plt.show()
 
-"""
+
 # heat map  : 
 
 """
@@ -80,6 +80,9 @@ plt.show()
 
 # scatter + reg line :
 
+"""
 df=sns.load_dataset("tips")
 sns.regplot(data=df, x="total_bill", y="tip")
 plt.show()
+"""
+
