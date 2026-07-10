@@ -18,11 +18,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import openpyxl
 
 
-data= sns.load_dataset("tips")
+"""data= sns.load_dataset("tips")
 print(data.head())
-
+"""
 # step  1 : info () ,describe() ,head() ,tail() ,isnull().sum() 
 
 """
@@ -57,5 +58,8 @@ print(data['smoker'].value_counts())
 """sns.scatterplot(data=data,x="total_bill",y="tip")
 plt.show()
 """
-sns.heatmap(data =data.corr(numeric_only=True),annot=True,cmap="YlGnBu",fmt=".2f")
+"""sns.heatmap(data =data.corr(numeric_only=True),annot=True,cmap="YlGnBu",fmt=".2f")
 plt.show()
+"""
+
+
