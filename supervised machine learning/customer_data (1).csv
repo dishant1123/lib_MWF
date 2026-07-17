@@ -1,0 +1,11 @@
+CustomerID,Name,Age,Gender,City,Education,Salary,Purchased
+1,Amit,25.0,Male,Ahmedabad,Graduate,35000.0,Yes
+2,Priya,30.0,Female,Surat,Post Graduate,42000.0,No
+3,Rahul,,Male,Rajkot,Graduate,38000.0,Yes
+4,Sneha,28.0,Female,Ahmedabad,,40000.0,Yes
+5,Karan,35.0,Male,,Graduate,,No
+6,Neha,40.0,Female,Surat,PhD,70000.0,Yes
+7,Rohan,29.0,Male,Vadodara,Graduate,45000.0,
+8,Pooja,,Female,Rajkot,Graduate,39000.0,No
+9,Vivek,32.0,Male,Ahmedabad,Post Graduate,48000.0,Yes
+10,Meena,27.0,Female,Surat,Graduate,41000.0,No

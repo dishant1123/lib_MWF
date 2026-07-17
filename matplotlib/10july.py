@@ -24,13 +24,14 @@ step :7  pip install sweetviz  ===> function  : sv.analyze(df)
 5. discount vs profit 
 6. city , region, state  wise  performance : sales , profit  
 """
-"""
+
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-from ydata_profiling import ProfileReport"""
+from ydata_profiling import ProfileReport
 """
+
 df=pd.DataFrame({
     "id" :[1,2,3,4,5],
     "name":["saloni","dhruvi","vijay","jay","raj"],
@@ -48,18 +49,18 @@ print(dummies)
 """
 
 # image analysis using  :
-"""picture =plt.imread("matplotlib/virat_rohit.jpg")
+picture =plt.imread("matplotlib/virat_rohit.jpg")
 
 print(picture)
 print(picture.shape)
 
-inverted_picture =picture[ : : -1,:,:]
-mirror_image =picture[ :,: :-1,:]
-reduce_qulity =picture[ :,:, : :-1]
-crop_image=picture[30 :190,150 :550,0:200 ] 
-plt.imshow(crop_image)
-plt.show()
-"""
+# inverted_picture =picture[ : : -1,:,:]
+# mirror_image =picture[ :,: :-1,:]
+# reduce_qulity =picture[ :,:, : :-1]
+# crop_image=picture[30 :190,150 :550,0:200 ] 
+# plt.imshow(crop_image)
+# plt.show()
+
 
 """df =pd.read_csv("matplotlib\SampleSuperstore.csv")
 print(df.head())
@@ -109,11 +110,11 @@ for i in range(n):
     d1[follower] =value
 print(d1)
 """
-
+"""
 def split_product_code(product_code):
     return product_code.split()
 
 
 product_code = 'ZOMATO-FOOD-2024'
 result = split_product_code(product_code)
-print(result)
+print(result)"""
