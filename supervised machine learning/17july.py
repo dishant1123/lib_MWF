@@ -8,12 +8,13 @@ from sklearn.preprocessing import LabelEncoder
 # data  import from  csv file : 
 
 df = pd.read_csv("supervised machine learning\customer_data (1).csv")
-# print(df)
+print(df)
 
 # missing  value count : 
+"""
 missing_value = df.isnull().sum()
-# print(missing_value)
-
+print(missing_value)
+"""
 
 # missing value  fill  :  df.fillna() age --> mean ,salary --> median ,city,edu,purchased ---> mode 
 # age ---> shlok  ,salary --> jenish , city edu pur --> prem 
@@ -41,3 +42,4 @@ df=df.drop('City',axis=1)
 
 # print(city_encode)
 print(df)
+
