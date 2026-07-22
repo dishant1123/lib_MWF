@@ -14,7 +14,8 @@ df=pd.DataFrame({
 age  : 
 salary : 
 """
-# KNN , k-means ,decision tree , random forest  
+#when use scaling require : KNN,K-means ,SVM,PCA ,logistic regression,nerual network , not use ==> Decision Tree ,Random Forest,XGBoost
+
 
 """scaler = StandardScaler()
 x_scaled = scaler.fit_transform(df)
