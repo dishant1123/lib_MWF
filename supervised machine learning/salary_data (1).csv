@@ -15,3 +15,10 @@ YearsExperience,Salary
 14,108000
 15,115000
    
+80 :20     ====> 80 training  20  test 
+
+x_train ===> input features  exp    1
+y_train ===> actual value  salary  actual value 35000  
+
+x_test ===> 13 
+y_test ===> 101000  

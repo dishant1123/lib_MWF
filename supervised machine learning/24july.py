@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LinearRegression
 
-df = pd.read_csv("supervised machine learning\salary_data (1).csv")
+df = pd.read_csv("supervised machine learning/salary_data (1).csv")
 print(df)
 
 # scatter plot :
