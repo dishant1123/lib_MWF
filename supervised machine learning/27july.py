@@ -121,15 +121,33 @@ print("predicted value :",y_pred)
 comparison = pd.DataFrame({'Actual value':y_test.values,'predicted value':y_pred})
 print(comparison)
 
+coef = pd.DataFrame({
+    "Feature": X.columns,
+    "Coefficient": model.coef_
+}
+)
+print(coef)
 # evaluation :  mean square error
 # VIF : variance inflation factor
-
-vif =pd.DataFrame()
-vif['feature'] = X.columns
-
-vif['VIF'] = [variance_inflation_factor(X.values, i)
-              for i in range(X.shape[1])]
-
+# VIF
+vif = pd.DataFrame()
+vif["Feature"] = X.columns 
+vif["VIF"] = [
+    variance_inflation_factor(X.values, i)
+    for i in range(X.shape[1])
+]
 print(vif)
 
-# abs :
+importance = coef.copy()
+importance["Absolute"] = importance["Coefficient"].abs()
+
+print("\nFeature Importance")
+print(
+    importance.sort_values(
+        by="Absolute",
+        ascending=False
+    )[["Feature", "Coefficient"]]
+)
+"""
+The regression model predicts house prices reasonably well, but the VIF analysis reveals severe multicollinearity between Area and Bedrooms. Since these two features are highly correlated, their coefficient values are unstable and should not be used to judge feature importance. The Age feature has a low VIF, so its coefficient is more reliable. Before interpreting feature importance in Multiple Linear Regression, always check the VIF values.
+"""
