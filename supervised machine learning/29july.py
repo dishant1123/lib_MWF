@@ -131,5 +131,12 @@ print("predict salary :",predict_salary[0])
 apply evaluation metrics  in above  code  ====> salary_data (1).csv
 apply evaluation metrics  in above  code  ====> student_marks_small .csv 
 
+
+traning score  = model.score(X_train,y_train)
+testing score  = model.score(X_test,y_test)
+
+overfitting 
+underfitting
+
 """
 
