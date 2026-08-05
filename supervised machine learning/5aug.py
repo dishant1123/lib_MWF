@@ -29,3 +29,54 @@ The alpha and l1_ratio values are hyperparameters, meaning there is no fixed val
 | Lasso      | alpha=0.1 or alpha=1 	 |
 | ElasticNet | alpha=1, l1_ratio=0.5 	 |
 """
+
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import ElasticNet
+from sklearn.model_selection import train_test_split 
+from sklearn.metrics import r2_score
+from sklearn.preprocessing import StandardScaler 
+
+# read excel 
+df =pd.read_excel("supervised machine learning/salary_regularization (1).xlsx")
+
+# features selection :
+X=df.drop(['Salary'],axis=1)
+y=df['Salary']
+
+#spilt data:
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
+ 
+# scale data :
+scaler = StandardScaler()
+X_train_scale = scaler.fit_transform(X_train,y_train)
+X_test_scale = scaler.transform(X_test)
+
+# model :
+lr = LinearRegression()
+lr.fit(X_train_scale,y_train)
+prediction_1 =lr.predict(X_test_scale)
+
+# model lasso :
+
+ls = Lasso(alpha=100)
+ls.fit(X_train_scale,y_train)
+prediction_2 =ls.predict(X_test_scale)
+
+# model ridge :
+
+ri = Ridge(alpha=1)
+ri.fit(X_train_scale,y_train)
+prediction_3 =ri.predict(X_test_scale)
+
+# model elasticnet :
+El = ElasticNet(alpha=1,l1_ratio=0.5)  # 50 % lasso and 50 % ridge
+El.fit(X_train_scale,y_train)
+prediction_4 =El.predict(X_test_scale)
+
+# compare :
+# print r2score : 
+# conculsion : 
