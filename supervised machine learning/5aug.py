@@ -80,3 +80,7 @@ prediction_4 =El.predict(X_test_scale)
 # compare :
 # print r2score : 
 # conculsion : 
+
+r2_score_linear = r2_score(y_test,prediction_1)
+print("r2_score linear :",r2_score_linear)
+
