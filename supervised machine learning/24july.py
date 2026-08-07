@@ -100,7 +100,7 @@ plt.ylabel('Salary')
 plt.title('Salary vs Years of Experience')
 plt.legend()
 plt.grid(True)
-# plt.show()
+plt.show()
 
 # predict new  data  : 
 

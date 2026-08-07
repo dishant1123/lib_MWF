@@ -23,7 +23,7 @@ from sklearn.feature_selection import RFE
 
 # read _csv :
 
-"""df =pd.read_csv("supervised machine learning\customer_purchase_dataset.csv")
+df =pd.read_csv("supervised machine learning/customer_purchase_dataset.csv")
 # print(df)
 
 # IQR : 
@@ -54,4 +54,3 @@ model.fit(X_scaled,y)
 
 #select features :
 print(selector.fit(X_scaled,y).support_)
-"""

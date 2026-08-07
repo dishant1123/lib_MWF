@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 
 # data  import from  csv file : 
 
-df = pd.read_csv("supervised machine learning\customer_data (1).csv")
+df = pd.read_csv("supervised machine learning/customer_data (1).csv")
 print(df)
 
 # missing  value count : 
