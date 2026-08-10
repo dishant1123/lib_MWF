@@ -83,8 +83,8 @@ x_linear_train,x_linear_test,y_linear_train,y_linear_test=train_test_split(
 )
 
 model = LinearRegression()
-model.fit(x_linear_train,y_linear_train)
-pred=model.predict(x_linear_test)
+model.fit(x_linear_train, y_linear_train)
+pred_linear = model.predict(x_linear_test)
 
 print("coefficient :",model.coef_[0])
 print("intercept :",model.intercept_)
@@ -93,34 +93,35 @@ print("intercept :",model.intercept_)
 # model : 2. multiple linear regression
 
 multi = LinearRegression()
-multi.fit(X_train,y_train)
-pred=multi.predict(X_test)
+multi.fit(X_scaler, y_train)
+pred_multi = multi.predict(x_test_scaler)
+
 # print("r2_score multiple linear :",r2_score(y_test,pred))
 
 # model : 3. lasso
-l1 = Lasso(alpha=100,max_iter=10000)
-l1.fit(X_scaler,y_train)
-pred=l1.predict(x_test_scaler)
+l1 = Lasso(alpha=100, max_iter=10000)
+l1.fit(X_scaler, y_train)
+pred_lasso = l1.predict(x_test_scaler)
 
 # print("r2_score lasso :",r2_score(y_test,pred))
 
 # model : 4. ridge
 
-r1=Ridge(alpha=1)
-r1.fit(X_scaler,y_train)
-pred=r1.predict(x_test_scaler)
+r1 = Ridge(alpha=1)
+r1.fit(X_scaler, y_train)
+pred_ridge = r1.predict(x_test_scaler)
+
 # print("r2_score ridge :",r2_score(y_test,pred))
 
 # model : 5. elasticnet
-e1=ElasticNet(alpha=1,l1_ratio=0.5,max_iter=10000) 
-e1.fit(X_scaler,y_train)
-pred=e1.predict(x_test_scaler)
+e1 = ElasticNet(alpha=1, l1_ratio=0.5, max_iter=10000)
+e1.fit(X_scaler, y_train)
+pred_elastic = e1.predict(x_test_scaler)
 # print("r2_score elasticnet :",r2_score(y_test,pred))
 
 # compare all models :
-
-print("r2_score linear :",r2_score(y_linear_test,pred))
-print("r2_score multiple linear :",r2_score(y_test,pred))
-print("r2_score lasso :",r2_score(y_test,pred))
-print("r2_score ridge :",r2_score(y_test,pred))
-print("r2_score elasticnet :",r2_score(y_test,pred))
+print("R2 Score Simple Linear      :", r2_score(y_linear_test, pred_linear))
+print("R2 Score Multiple Linear    :", r2_score(y_test, pred_multi))
+print("R2 Score Lasso Regression   :", r2_score(y_test, pred_lasso))
+print("R2 Score Ridge Regression   :", r2_score(y_test, pred_ridge))
+print("R2 Score ElasticNet         :", r2_score(y_test, pred_elastic))
