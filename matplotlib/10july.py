@@ -51,7 +51,7 @@ print(dummies)
 # image analysis using  :
 picture =plt.imread("matplotlib/virat_rohit.jpg")
 
-print(picture)
+# print(picture)
 print(picture.shape)
 
 # inverted_picture =picture[ : : -1,:,:]
