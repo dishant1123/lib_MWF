@@ -60,4 +60,4 @@ df['city'] =df['city'].replace(['ahm',"bombay"],["ahemedabad","mumbai"])
 
 print(df)
 
-# pending  topic : duplicate ,Winsorization,loc ,iloc ,join, groupby ,concat ,filter ,pivort_table,sort ,apply,get_dummies , which  data type  we use to fill means mean ,avg how to decided 
+#pending  topic : duplicate ,Winsorization,loc ,iloc ,join, groupby ,concat ,filter ,pivort_table,sort ,apply,get_dummies , which  data type  we use to fill means mean ,avg how to decided 
