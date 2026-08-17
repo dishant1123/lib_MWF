@@ -1,4 +1,3 @@
-
 """
 step:1 read csv 
 step:2 features engineering   x = df['Study_Hours','Attendance'] y=df['Result']

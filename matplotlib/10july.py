@@ -54,12 +54,12 @@ picture =plt.imread("matplotlib/virat_rohit.jpg")
 # print(picture)
 print(picture.shape)
 
-# inverted_picture =picture[ : : -1,:,:]
+inverted_picture =picture[ : : -1,:,:]
 # mirror_image =picture[ :,: :-1,:]
 # reduce_qulity =picture[ :,:, : :-1]
 # crop_image=picture[30 :190,150 :550,0:200 ] 
-# plt.imshow(crop_image)
-# plt.show()
+plt.imshow(inverted_picture)
+plt.show()
 
 
 """df =pd.read_csv("matplotlib\SampleSuperstore.csv")
