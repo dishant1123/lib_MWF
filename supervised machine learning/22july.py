@@ -1,5 +1,6 @@
 """
-==>RFE (Recursive Feature Elimination):It repeatedly removes the least important feature until only the desired number remain.
+==>RFE (Recursive Feature Elimination):It repeatedly removes the least important feature 
+until only the desired number remain.
 
 1.regression :
 2.when we use regression  : number and continuous value.
