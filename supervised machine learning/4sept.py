@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
-from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
+from sklearn.metrics import accuracy_score,confusion_matrix,classification_report,roc_auc_score,f1_score,precision_score,recall_score
 
 df = pd.read_csv("supervised machine learning/Churn_Modelling (1).csv")
 print(df.head())
@@ -57,4 +57,24 @@ feature_importance = model.feature_importances_
 data =pd.DataFrame({'feature':X.columns,'importance':feature_importance})
 data.sort_values(by='importance',ascending=False)
 print(data)
+
+"""
+[[1530   63]
+ [ 224  183]]
+
+
+Tp => 1530 Actual = Positive, Prediction = Positive.
+Fn => 63  Actual = Positive, Prediction = Negative
+Fp => 224 Actual = Negative, Prediction = Positive.
+Tn => 183 Negative, Prediction = Negative.
+"""
+
+# probability :
+
+# prob = model.predict_proba(X_test)
+
+
+# print roc ,auc ,curve : 
+
+# conclusion : 
 
