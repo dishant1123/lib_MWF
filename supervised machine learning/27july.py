@@ -137,7 +137,6 @@ vif["VIF"] = [
     for i in range(X.shape[1])
 ]
 print(vif)
-
 importance = coef.copy()
 importance["Absolute"] = importance["Coefficient"].abs()
 
