@@ -28,6 +28,7 @@ The alpha and l1_ratio values are hyperparameters, meaning there is no fixed val
 | Ridge      | alpha=1                 	 |
 | Lasso      | alpha=0.1 or alpha=1 	 |
 | ElasticNet | alpha=1, l1_ratio=0.5 	 |
+
 """
 
 import pandas as pd
