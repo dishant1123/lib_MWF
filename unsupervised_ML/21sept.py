@@ -114,3 +114,4 @@ df['cluster']=k_means.fit_predict(df)
 
 print(df)
 print("centroid :",k_means.cluster_centers_)  # centroid 
+
