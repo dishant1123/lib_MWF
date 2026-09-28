@@ -35,18 +35,17 @@ X = df[['Age','Annual_Income','Spending_Score']]
 
 # graph  the data : 
 
-"""
+
 plt.scatter(X['Age'],X['Spending_Score'],c="violet",s=100)
 plt.xlabel('Age')
 plt.ylabel('Spending Score')
 plt.show()
-"""
+
 
 # scale the data :
 
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X) 
-
 
 # eps k distance graph
 
@@ -67,6 +66,51 @@ plt.show()
 db =DBSCAN(eps=0.8,
            min_samples=5).fit(X_scaled) 
 
+df['cluster'] =db.fit_predict(X_scaled)
+print(df)
+
+# display the cluster labels :
+print(df['cluster'].values)
+noise_points = df[df["cluster"] == -1]
+print(noise_points)
+
+# graph DBSCAN Clusters
+plt.figure(figsize=(8, 5))
+plt.scatter(
+    X_scaled[:, 0],
+    X_scaled[:, 1],
+    c=df["cluster"],
+    s=100
+)
+plt.xlabel("Income (Scaled)")
+plt.ylabel("Spending Score (Scaled)")
+plt.title("DBSCAN Clustering")
+plt.show()
+
+# hightlight  Noise Points
+plt.figure(figsize=(8, 5))
+plt.scatter(
+    X_scaled[df["cluster"] != -1, 0],
+    X_scaled[df["cluster"] != -1, 1],
+    c=df.loc[df["cluster"] != -1, "cluster"],
+    s=100
+)
+# Plot noise points separately
+plt.scatter(
+    X_scaled[df["cluster"] == -1, 0],
+    X_scaled[df["cluster"] == -1, 1],
+    marker="x",
+    s=150,
+    label="Noise"
+)
+plt.xlabel("Income (Scaled)")
+plt.ylabel("Spending Score (Scaled)")
+plt.title("DBSCAN - Clusters and Noise")
+plt.legend()
+plt.show()
+
 
 # hw : mall_customer.csv -------> kaggle dataset
+
+
 
