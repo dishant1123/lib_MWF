@@ -111,6 +111,3 @@ plt.show()
 
 
 # hw : mall_customer.csv -------> kaggle dataset
-
-
-
