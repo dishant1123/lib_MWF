@@ -74,6 +74,7 @@ print(df['cluster'].values)
 noise_points = df[df["cluster"] == -1]
 print(noise_points)
 
+
 # graph DBSCAN Clusters
 plt.figure(figsize=(8, 5))
 plt.scatter(
