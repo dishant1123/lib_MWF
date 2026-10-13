@@ -54,7 +54,5 @@ new_data_df = pd.DataFrame({
 })
 
 new_data = scaler.transform(new_data_df)
-
 predictions_new_data = model.predict(new_data)
-
 print("Predictions" , predictions_new_data[0])
