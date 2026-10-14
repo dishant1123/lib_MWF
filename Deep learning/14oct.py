@@ -66,38 +66,20 @@ print("B2 :",model.intercepts_[1])
 sample = X_test[0 :1]
 
 # hidden  layer  :
-hidden_layer = np.dot(sample, model.coefs_[0]) + model.intercepts_[0]
+Z1 = np.dot(sample, model.coefs_[0]) + model.intercepts_[0]
 # x1w1 + x2w2 +b1 
 
 # activation function :
-activation_function  = np.max(0,hidden_layer)
+a1 = np.maximum(0, Z1)
 
-# output  layer :
-output_layer = np.dot(activation_function, model.coefs_[1]) + model.intercepts_[1]
+# hidden layer 2 :
+Z2 = np.dot(a1, model.coefs_[1]) + model.intercepts_[1]
 
-print("Hidden layer :", hidden_layer)
-print("Activation function :", activation_function)
-print("Output layer :", output_layer)
+#output layer :
+a2 =1/1+np.exp(-Z2)
 
-# graph :
-
-activations = np.concatenate([
-    sample.flatten(),
-    hidden_layer.flatten(),
-    output_layer.flatten()
-]) 
-
-labels = [
-    "Age",
-    "Monthly_Income",
-    "hidden layer",
-    "Activation function",
-    "Purchase"
-]
-
-plt.figure(figsize=(8,5))
-plt.bar(activations,labels)
-plt.xlabel("Activations")
-plt.ylabel("Features")
-plt.title("Activations vs Features")
-plt.show()
+print("Hidden layer :", a1)
+print("Activation function :", a2)
+print("Output layer :", a2)
+print("Prediction :", model.predict(sample))
+print("probability :", model.predict_proba(sample)[ :,1])
