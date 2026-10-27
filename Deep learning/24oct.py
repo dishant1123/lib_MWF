@@ -29,6 +29,10 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
 # build model : 
+
+# optimizer : 
+
+
 tf.keras.set_random_seed(42)
 
 build_model = Sequential([
